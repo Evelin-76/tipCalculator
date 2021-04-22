@@ -1,0 +1,97 @@
+import java.util.*;
+
+public class Main {
+  public static void main(String[] args) {
+   //WRITE YOUR CODE HERE
+
+  Scanner scn = new Scanner(System.in);
+  System.out.println("Split:");
+  String isYes = scn.next();
+ 
+  switch (isYes){
+    case "Yes":
+
+  System.out.println("Number of people:");
+  int numberOfPeople  = scn.nextInt();
+  
+  System.out.println("Check amount:");
+  double checkAmount = scn.nextDouble();
+
+  double poorTip = checkAmount / 100 * 5, fairTip = checkAmount / 100 * 10, goodTip = checkAmount / 100 * 15, greatTip = checkAmount / 100 * 20, excellentTip = checkAmount / 100 * 25;
+  double totalToPay;
+  
+  scn.nextLine();
+
+  System.out.println("Service Quality:");
+  String serviceQuality = scn.nextLine();
+  switch (serviceQuality) {
+    case "Poor": 
+    System.out.print("Number of people entered: ");
+    for(int a = 1; a <= numberOfPeople; a++){
+    System.out.print("&");
+  }
+      scn.nextLine();
+    
+    totalToPay = checkAmount + poorTip;
+    System.out.println("Total to pay:" +  totalToPay); 
+    System.out.println("Total tip:" + poorTip );  
+    System.out.println("Total per person:" + totalToPay / numberOfPeople); 
+    System.out.println("Tip per person:" + (poorTip / numberOfPeople)); 
+     break;
+    case "Fair": 
+    System.out.print("Number of people entered: ");
+    for(int a = 1; a <= numberOfPeople; a++){
+    System.out.print("&");
+  } 
+    scn.nextLine();
+    
+    totalToPay = checkAmount + fairTip;
+    System.out.println("Total to pay:" +  totalToPay); 
+    System.out.println("Total tip:" + fairTip );  
+    System.out.println("Total per person:" + totalToPay / numberOfPeople); 
+    System.out.println("Tip per person:" + (fairTip / numberOfPeople)); 
+     break;
+    case "Good": 
+    System.out.print("Number of people entered: ");
+    for(int a = 1; a <= numberOfPeople; a++){
+    System.out.print("&");
+  } 
+    scn.nextLine();
+    
+    totalToPay = checkAmount + goodTip;
+    System.out.println("Total to pay:" +  totalToPay); 
+    System.out.println("Total tip:" + goodTip );  
+    System.out.println("Total per person:" + totalToPay / numberOfPeople); 
+    System.out.println("Tip per person:" + (goodTip / numberOfPeople)); 
+     break;
+    case "Great": ; 
+    System.out.print("Number of people entered: ");
+    for(int a = 1; a <= numberOfPeople; a++){
+    System.out.print("&");
+  } 
+    scn.nextLine();
+    
+    totalToPay = checkAmount + greatTip;
+    System.out.println("Total to pay:" +  totalToPay); 
+    System.out.println("Total tip:" + greatTip );  
+    System.out.println("Total per person:" + totalToPay / numberOfPeople); 
+    System.out.println("Tip per person:" + (greatTip / numberOfPeople)); 
+     break;
+    case "Excellent": 
+    System.out.print("Number of people entered: ");
+    int numberOfPeopleEntered;
+    for(int i = 1; i <= numberOfPeople; i++){
+    System.out.print("&");
+  } 
+   scn.nextLine();
+
+    totalToPay = checkAmount + excellentTip;
+    System.out.println("Total to pay:" +  totalToPay); 
+    System.out.println("Total tip:" + excellentTip );  
+    System.out.println("Total per person:" + totalToPay / numberOfPeople); 
+    System.out.println("Tip per person:" + (excellentTip / numberOfPeople)); 
+    break; 
+  }
+  break;
+  default:}}
+}
